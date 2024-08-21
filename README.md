@@ -8,4 +8,3 @@ The idea is to convert the decimal number of the desired position (from 0 to 100
 After transmiting the byte, just take the %2 (modulus 2) of the hex number to extract the direction bit, right shift the hex number by 1, then convert it to decimal to get the desired number of steps. Very simple and elegant!!
 
 This was a code snippet I wrote for the stepper motor driver of a laser particle detection device.
-For some reason, I could not convince the CEO that this would work. This snippet proves that it does work.
