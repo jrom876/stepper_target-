@@ -46,7 +46,7 @@ int dec_to_hex(int decimal) {
 // Functions
 //************************************
 int setTarget (int target, int direction){
-	target = (target <= 100) ? target : 100; // this keeps target value <= 100
+    target = (target <= 100) ? target : 100; // this keeps target value <= 100
     initialValue = target << 1;
     initialValue += direction;
     return dec_to_hex(initialValue);
