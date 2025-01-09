@@ -9,7 +9,6 @@ The steps are as follows:
 3)  The firmware left shifts that hex value by 1 bit, << 1 , which doubles it, then adds the direction bit (0 or 1).
    For instance, 100 steps counter clockwise becomes 0xC9: ((100d * 2) + 1) == 201d == ((0x64 << 1) + 1) == 0xC9
 4)  Transmit the byte to the motor controller's processor
-5)  The motor controller reverses steps 1 through 3 above. It takes % 2 (modulus 2) of the hex number to extract the direction bit, then right shifts the hex number 1 bit (>> 1, which divides it by 2), then converts the result to decimal to get the desired number of steps in decimal.
+5)  The motor controller reverses steps 3 through 1 above. It takes % 2 (modulus 2) of the hex number to extract the direction bit, then right shifts the hex number 1 bit (>> 1, which divides it by 2), then converts the result to decimal to get the desired number of steps in decimal.
 
  This algorithm is very simple and elegant, and it takes a surprisingly few lines of code.
-
