@@ -3,7 +3,7 @@ Stepper motor position and direction converter
 
 This is to prove that you can use a 1-byte UART command to control the position and direction of a 200-step per cycle stepper motor.
 
-The steps are as follows:
+The procedure is as follows:
 1)  The front end processor receives a decimal number of the desired position (from 0 to 100 steps) and a direction bit (0 = clockwise, 1 = counter-clockwise) from the user
 2)  The front end code converts the decimal number to the hexadecimal equivalent. For instance: 100d == 0x64 
 3)  The code left shifts that hex value by 1 bit, << 1 , which doubles it, then adds the direction bit (0 or 1).
