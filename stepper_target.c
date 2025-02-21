@@ -32,10 +32,10 @@ int dec_to_hex(int decimal) {
 	int i = 0, hec;
 	double hex = 0;
 	while (decimal != 0) {
-        hec = decimal % 16;
-        hex = hex + (hec * power(10, i));
-        decimal = floor(decimal/16);
-        i += 1;
+	        hec = decimal % 16;
+	        hex = hex + (hec * power(10, i));
+	        decimal = floor(decimal/16);
+	        i += 1;
 	}
 	printf("decimal to hex:\t"); // DBPRINT
 	printf("%d\n",(int)hex); // DBPRINT
@@ -46,9 +46,8 @@ int dec_to_hex(int decimal) {
 // Functions
 //************************************
 int setTarget (int target, int direction){
-    target = (target <= 100) ? target : 100; // this keeps target value <= 100
-    initialValue = target << 1;
-    initialValue += direction;
+    target = (target <= 100) ? target : 0; // this keeps target value <= 100
+    initialValue = (target << 1) += direction;
     return dec_to_hex(initialValue);
 }
 
